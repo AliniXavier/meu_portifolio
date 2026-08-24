@@ -402,9 +402,20 @@ body {
 /* Tornar a página responsiva para telas verticais */
 @media (max-width: 768px) {
   #banner {
-    flex-wrap: wrap !important;
+    display: block !important; /* Desativa a divisão em 3 colunas */
+    margin-top: 110px;
+    padding: 20px 10px;
   }
-  .content {
-    flex: 1 1 100% !important;
+
+  .perfil img {
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .content p {
+    max-width: 100% !important;
+    padding: 0 10px;
+    font-size: 0.9rem;
   }
 }
