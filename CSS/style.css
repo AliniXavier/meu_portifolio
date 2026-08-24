@@ -1,0 +1,400 @@
+/* 1. CONFIGURAÇÕES GERAIS E RESET */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #6a4dbf;
+}
+
+body {
+  background-color: #4e3283;
+}
+
+/* Compensação para links de âncora não ficarem sob o menu fixo */
+#sobre-mim,
+#formacao,
+#portifolio,
+#contato {
+  scroll-margin-top: 100px;
+}
+
+/* Classes utilitárias de texto */
+.white {
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.white2 {
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+}
+
+.white3 {
+  color: #ffffff;
+  font-size: 15px;
+  text-align: center;
+}
+
+
+/* 2. CABEÇALHO E MENU FIXOS NO TOPO */
+/* Topo fixo: Nome / Título */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  z-index: 1001;
+  background-color: #4e3283;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Menu de navegação fixo logo abaixo do header */
+#menu {
+  position: fixed;
+  top: 55px;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  z-index: 1000;
+  background-color: #4e3283;
+  padding: 8px 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+#menu a:link, 
+#menu a:visited {
+  color: #ffffff;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#menu a:hover {
+  color: #1C3B36;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+
+/* 3. SEÇÃO 1: SOBRE MIM (BANNER, PERFIL, APRESENTAÇÃO E REDES)*/
+/* Container principal da seção com imagem de fundo */
+#banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px; /* Compensa a altura do #header (55px) + #menu (45px) */
+  padding: 40px 20px;
+  min-height: calc(100vh - 100px);
+  background-color: #4e3283;
+  background-image: linear-gradient(rgba(78, 50, 131, 0.75), rgba(78, 50, 131, 0.75)), url('../imagens/fundo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Coluna esquerda: Foto de Perfil */
+.perfil {
+  flex-shrink: 0;
+  margin-left: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.perfil img {
+  display: block;
+  width: 250px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Coluna central: Texto de Apresentação */
+.content {
+  flex: 1;
+  background-color: transparent;
+  text-align: center;
+  padding: 0 30px;
+}
+
+.content h2 b {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 350;
+}
+
+.content p {
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 15px auto;
+  max-width: 700px;
+  opacity: 0.95;
+}
+
+/* Coluna direita: Contato e Links Sociais */
+#post {
+  background-color: transparent;
+  text-align: center;
+}
+
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.link-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  gap: 3px;
+  padding: 5px;
+  transition: all 0.2s ease;
+}
+
+.link-social:hover {
+  color: #1C3B36;
+  background-color: #6a4dbf;
+  border-radius: 5px;
+}
+
+.icone {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+
+/*4. SEÇÃO 2: FORMAÇÃO */
+#formacao {
+  background-color: #4e3283;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.container-formacao-visivel {
+  background-color: transparent;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lista-formacao {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.item-formacao {
+  line-height: 1.6;
+}
+
+.item-formacao strong {
+  display: inline;
+}
+
+.item-formacao .periodo {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+
+/* 5. SEÇÃO 3: PORTFÓLIO*/
+.banner-portifolio {
+  width: 100%;
+  display: block;
+  background-image: linear-gradient(rgba(78, 50, 131, 0.75), rgba(78, 50, 131, 0.75)), url('../imagens/fundo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px 80px 20px;
+  text-align: center;
+}
+
+.titulo-portifolio {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+
+.cards-container {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Card Branco de Projeto */
+.post2 {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  width: 420px;
+  min-height: 420px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post2 h2 {
+  font-size: 1.3rem;
+  color: #4e3283;
+  margin-bottom: 5px;
+}
+
+.data-post {
+  font-size: 12px;
+  color: #888888;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.img-post {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.post2 p {
+  font-size: 0.95rem;
+  color: #333333;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.link-leia-mais {
+  color: #4e3283;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.link-leia-mais:hover {
+  text-decoration: underline;
+}
+
+
+/* 6. SEÇÃO 4: CONTATO (FORMULÁRIO)*/
+.secao-formulario {
+  background-color: #4e3283;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-formulario {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 580px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.form-titulo {
+  color: #4e3283;
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.form-subtitulo {
+  color: #6a4dbf;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.campo-grupo {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-grupo label {
+  color: #4e3283;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.campo-grupo input,
+.campo-grupo textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1.5px solid #6a4dbf;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #333333;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campo-grupo input:focus,
+.campo-grupo textarea:focus {
+  border-color: #4e3283;
+  box-shadow: 0 0 0 3px rgba(78, 50, 131, 0.15);
+}
+
+.campo-grupo textarea {
+  resize: vertical;
+}
+
+.btn-enviar {
+  width: 100%;
+  background-color: #4e3283;
+  color: #ffffff;
+  border: none;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #3b2663;
+}
+
+.btn-enviar:active {
+  transform: scale(0.99);
+}
+
+
+/* 7. RODAPÉ DA PÁGINA */
+.rodape {
+  background-color: #4e3283;
+  text-align: center;
+  padding: 25px 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

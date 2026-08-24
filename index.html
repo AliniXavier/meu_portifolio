@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio - Alini Xavier</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <script>
+      "use strict"; // Ativa o modo estrito do JavaScript
+
+      // Valida os campos do formulário de contato e simula o envio dos dados.
+      function validarEnviar() {
+        // 1. Captura e limpa espaços extras dos valores digitados
+        const nome = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const mensagem = document.getElementById("mensagem").value.trim();
+
+        // 2. Validação: Verifica se todos os campos foram preenchidos
+        if (nome === "" || email === "" || mensagem === "") {
+          alert("Por favor, preencha todos os campos antes de enviar!");
+          return;
+        }
+
+        // 3. Validação: Verifica formato básico de e-mail (presença de '@' e '.')
+        if (email.indexOf("@") === -1 || email.indexOf(".") === -1) {
+          alert("Por favor, insira um e-mail válido no formato: usuario@dominio.com");
+          return;
+        }
+
+        // 4. Simulação de envio no console do navegador
+        console.log("--- Simulação de Envio de Contato ---");
+        console.log(`Nome: ${nome}`);
+        console.log(`E-mail: ${email}`);
+        console.log(`Mensagem: ${mensagem}`);
+
+        // 5. Notificação de confirmação para o usuário
+        alert("Mensagem enviada com sucesso!");
+
+        // 6. Reseta os campos do formulário após o envio
+        document.getElementById("nome").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("mensagem").value = "";
+      }
+    </script>
+
+    <!-- CONTAINER PRINCIPAL: Sobre mim -->
+    <div class="container">
+      <header class="topo" id="header">
+        <h1 class="white">Portifólio - Alini Xavier</h1>
+      </header>
+
+      <!-- MENU DE NAVEGAÇÃO -->
+      <nav class="menu" id="menu">
+        <a href="#top">SOBRE MIM</a>
+        <a href="#formacao">FORMAÇÃO</a>
+        <a href="#portifolio">PORTIFÓLIO</a>
+        <a href="#contato">CONTATO</a>
+      </nav>
+
+      <!-- SEÇÃO: Sobre mim -->
+      <div id="banner" class="sobre-mim">
+        <!-- GRID ESQUERDA: Foto de Perfil -->
+        <aside class="esquerda perfil">
+          <img src="imagens/alini.png" alt="Foto de perfil">
+        </aside>
+
+        <!-- GRID PRINCIPAL: Quem sou eu -->
+        <main id="principal" class="content">
+          <h2><b>Olá, meu nome é Alini Xavier!</b></h2>
+          <br>
+          <p>
+            Estudante de Análise e Desenvolvimento de Sistemas (ADS) com transição de carreira focada em Desenvolvimento Back-end.
+            Concilio sólida experiência prévia em gestão de projetos corporativos, mapeamento de processos e automação de fluxos à
+            busca por oportunidades práticas na área de tecnologia.
+            <br><br>
+            Possuo conhecimento prático inicial no desenvolvimento de APIs RESTful utilizando o ecossistema JavaScript (Node.js e
+            Express), integrado à modelagem de dados estruturados com MySQL. Também possuo familiaridade com versionamento de código
+            via Git/GitHub e conceitos básicos de infraestrutura em nuvem com Microsoft Azure.
+            <br><br>
+            Pelo meu histórico profissional, apresento forte habilidade de comunicação para atuar como facilitadora entre
+            necessidades de negócio e entregas de software. Busco ingressar no mercado técnico através de uma vaga de Estágio em
+            Desenvolvimento de Software ou como Desenvolvedora Web Júnior
+            Principais Tecnologias: JavaScript, Node.js, Express.js, SQL (MySQL), APIs RESTful, Git/GitHub, Engenharia de Requisitos
+            e LLM.
+          </p>
+        </main>
+
+        <!-- GRID DIREITA: Minhas Redes -->
+        <aside class="direita" id="post">
+          <br><br>
+          <p class="white3">Me siga nas redes sociais e fique por dentro das novidades!</p>
+          <br><br>
+          <a class="white3" href="mailto:contato.alinixavier@gmail.com">contato.alinixavier@gmail.com</a>
+          <br><br>
+          <div class="redes-sociais">
+            <a class="link-social" href="https://www.linkedin.com/in/alinixavier/" target="_blank" rel="noopener noreferrer">
+              <img src="imagens/linkedin.png" alt="LinkedIn" class="icone">
+              <h4 class="white3">Linkedin</h4>
+            </a>
+            <a class="link-social" href="https://github.com/alinixavier" target="_blank" rel="noopener noreferrer">
+              <img src="imagens/github.png" alt="GitHub" class="icone">
+              <h4 class="white3">Github</h4>
+            </a>
+          </div>
+          <br><br>
+        </aside>
+      </div>
+    </div>
+
+    <!-- SEÇÃO 2: Formação -->
+    <div class="div" id="formacao">
+      <h1 class="white">Formação</h1>
+      <br><br>
+      <h2 class="white3">Graduação em Análise e Desenvolvimento de Sistemas - UNINTER<br><br>Conclusão em 03/2028</h2>
+      <br><br>
+      <h2 class="white3">Pós-Graduação em Inteligência Artificial e Tecnologias Educacionais - FAMEF<br><br>Concluída em 12/2025</h2>
+      <br><br>
+      <h2 class="white3">Bacharelado em Arquitetura e Urbanismo - UCS<br><br>Concluída em 08/2017</h2>
+      <br><br><br><br><br><br>
+    </div>
+
+    <!-- SEÇÃO 3: Portifólio -->
+    <div class="div" id="portifolio">
+      <section id="portifolio" class="banner-portifolio">
+        <h2 class="titulo-portifolio">Portifólio</h2>
+
+        <!-- Container flex com os dois posts dentro -->
+        <div class="cards-container">
+          <!-- Card 1 -->
+          <article class="post2">
+            <h2>IPF Sistemas - CRM & Gestão</h2>
+            <span class="data-post">Junho 2026 • Node.js, Express & SQL</span>
+            <img class="img-post" src="imagens/IPF Sistemas.png" alt="Tela de login do IPF Sistemas">
+            <p>
+              Desenvolvimento de API RESTful e arquitetura backend para gestão de relacionamento e controle de processos, integrando autenticação, controle de acessos e banco de dados relacional.
+            </p>
+            <a href="https://github.com/vivianelemes7-rr/Ipf" target="_blank" rel="noopener noreferrer" class="link-leia-mais">Ver repositório no GitHub →</a>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="post2">
+            <h2>Desafio QA & Testes de Software</h2>
+            <span class="data-post">Março 2026 • Qualidade de Software</span>
+            <img class="img-post" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Código de testes de software e automação">
+            <p>
+              Estruturação de planos de testes, cenários e garantia de qualidade de software, com foco na validação de regras de negócio e fluxos críticos de aplicação web.
+            </p>
+            <a href="https://github.com/AliniXavier/DESAFIO-QA-BEEDOO-2026" target="_blank" rel="noopener noreferrer" class="link-leia-mais">Ver repositório no GitHub →</a>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <!-- SEÇÃO 4: Contato -->
+    <section class="secao-formulario" id="contato-form">
+      <div id="contato" class="card-formulario">
+        <h2 class="form-titulo">Entre em Contato</h2>
+        <p class="form-subtitulo">Preencha o formulário abaixo para enviar sua mensagem.</p>
+
+        <!-- FORMULÁRIO DE CONTATO -->
+        <form class="form-contato">
+          <!-- Campo Nome -->
+          <div class="campo-grupo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Digite seu nome completo">
+          </div>
+
+          <!-- Campo E-mail -->
+          <div class="campo-grupo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="usuario@dominio.com">
+          </div>
+
+          <!-- Campo Mensagem -->
+          <div class="campo-grupo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
+          </div>
+
+          <!-- Botão com chamada da função JS -->
+          <button type="button" class="btn-enviar" onclick="validarEnviar()">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- RODAPÉ DA PÁGINA -->
+    <footer class="rodape" id="post">
+      <span class="white3">Todos os direitos reservados - Alini Xavier - 2026</span>
+    </footer>
+  </body>
+</html>
