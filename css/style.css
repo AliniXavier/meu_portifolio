@@ -401,8 +401,5 @@ body {
 
 /* Tornar a página responsiva para telas verticais */
 @media (max-width: 768px) {
-  #banner {
-    flex-direction: column;
-    height: auto;
-  }
+  #banner, .cards-container { flex-direction: column !important; }
 }
